@@ -25,7 +25,6 @@
   html { scroll-behavior: smooth; }
   body { font-family: 'Outfit', sans-serif; color: var(--dark); background: var(--white); overflow-x: hidden; }
 
-  /* NAV */
   nav {
     position: fixed; top: 0; left: 0; right: 0; z-index: 100;
     padding: 16px 50px; display: flex; justify-content: space-between; align-items: center;
@@ -40,9 +39,8 @@
   .nav-links a:hover { color: var(--navy); }
   .nav-cta { background: var(--navy) !important; color: white !important; padding: 10px 22px; border-radius: 2px; font-size: 11px !important; }
 
-  /* HERO */
   .hero {
-    height: 80vh; min-height: 560px; position: relative;
+    height: 68vh; min-height: 480px; position: relative;
     display: flex; align-items: center; justify-content: center; text-align: center; overflow: hidden;
   }
   .hero-bg {
@@ -70,12 +68,10 @@
   .btn-ghost { display: inline-block; padding: 14px 32px; border: 1px solid rgba(176,192,208,0.3); color: var(--silver-light); text-decoration: none; font-size: 11px; font-weight: 500; letter-spacing: 2px; text-transform: uppercase; border-radius: 2px; transition: all 0.3s; }
   .btn-ghost:hover { background: rgba(176,192,208,0.08); }
 
-  /* SECTION */
   .section-label { font-size: 10px; letter-spacing: 5px; text-transform: uppercase; color: var(--silver); margin-bottom: 12px; font-weight: 600; }
   .section-title { font-family: 'Libre Baskerville', serif; font-size: clamp(22px, 3vw, 38px); font-weight: 700; color: var(--dark); line-height: 1.15; margin-bottom: 14px; }
   .section-divider { width: 36px; height: 2px; background: var(--navy); margin-bottom: 28px; opacity: 0.3; }
 
-  /* NOSOTROS */
   .nosotros-wrap { background: var(--silver-pale); padding: 80px 50px; }
   .nosotros { max-width: 900px; margin: 0 auto; }
   .nosotros-header { text-align: center; margin-bottom: 36px; }
@@ -89,7 +85,6 @@
   .nosotros-image::after { content: ''; position: absolute; top: 14px; left: 14px; right: -14px; bottom: -14px; background: rgba(14,28,46,0.06); border-radius: 2px; z-index: -1; }
   .nosotros-image-accent { position: absolute; bottom: -14px; right: -14px; width: 70px; height: 70px; border: 2px solid var(--navy); border-radius: 2px; opacity: 0.15; z-index: -1; }
 
-  /* SERVICIOS */
   .servicios-wrap { background: #1a1a1a; padding: 80px 50px; }
   .servicios { max-width: 1000px; margin: 0 auto; }
   .servicios-header { text-align: center; margin-bottom: 50px; }
@@ -103,7 +98,6 @@
   .servicio-nombre { font-family: 'Libre Baskerville', serif; font-size: 16px; font-weight: 700; color: white; margin-bottom: 8px; line-height: 1.3; }
   .servicio-desc { font-size: 12px; color: var(--silver); line-height: 1.5; font-weight: 300; }
 
-  /* MID BANNER */
   .mid-banner { background: var(--cream); padding: 70px 50px; text-align: center; border-top: 3px solid var(--navy); }
   .mid-banner-content { max-width: 560px; margin: 0 auto; }
   .mid-banner-content .section-label { color: var(--navy); }
@@ -113,7 +107,6 @@
   .btn-navy { display: inline-flex; align-items: center; gap: 8px; padding: 14px 36px; background: var(--navy); color: white; text-decoration: none; font-size: 11px; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; border-radius: 2px; transition: all 0.3s; }
   .btn-navy:hover { background: var(--navy-light); transform: translateY(-2px); }
 
-  /* CONTACTO */
   .contacto-wrap { background: var(--navy-mid); padding: 60px 24px 36px; }
   .contacto { max-width: 440px; margin: 0 auto; text-align: center; }
   .contacto .section-divider { margin: 0 auto 28px; background: var(--silver-light); opacity: 0.3; }
@@ -126,7 +119,6 @@
   .contacto-value { font-family: 'Libre Baskerville', serif; font-size: 18px; color: white; }
   .contacto-value a { color: white; text-decoration: none; font-family: 'Outfit', sans-serif; font-size: 17px; font-weight: 500; }
 
-  /* FOOTER */
   footer { background: var(--dark); text-align: center; padding: 44px 24px; border-top: 1px solid rgba(255,255,255,0.05); }
   .footer-name { font-family: 'Libre Baskerville', serif; font-size: 19px; font-weight: 700; color: rgba(255,255,255,0.6); margin-bottom: 4px; }
   .footer-sub { font-size: 10px; letter-spacing: 4px; text-transform: uppercase; color: rgba(255,255,255,0.2); margin-bottom: 16px; }
@@ -136,11 +128,6 @@
   @media (max-width: 768px) {
     nav { padding: 14px 20px; }
     .nav-links { display: none; }
-    .hero-content { grid-template-columns: 1fr; padding: 0 20px; text-align: center; }
-    .hero-eyebrow { justify-content: center; }
-    .hero-desc { margin-left: auto; margin-right: auto; }
-    .hero-buttons { justify-content: center; }
-    .hero-photo { height: 380px; }
     .nosotros-wrap { padding: 50px 20px; }
     .servicios-wrap { padding: 50px 20px; }
     .servicios-grid { grid-template-columns: 1fr; }
@@ -150,7 +137,6 @@
 </head>
 <body>
 
-<!-- NAV -->
 <nav>
   <a href="#inicio" class="nav-brand">
     <span class="nav-brand-name">Nicolás Corradi</span>
@@ -164,7 +150,6 @@
   </ul>
 </nav>
 
-<!-- HERO -->
 <section class="hero" id="inicio">
   <div class="hero-bg"></div>
   <div class="hero-overlay"></div>
@@ -183,7 +168,6 @@
   </div>
 </section>
 
-<!-- NOSOTROS -->
 <div class="nosotros-wrap" id="nosotros">
   <div class="nosotros">
     <div class="nosotros-header">
@@ -202,7 +186,6 @@
   </div>
 </div>
 
-<!-- SERVICIOS -->
 <div class="servicios-wrap" id="servicios">
   <div class="servicios">
     <div class="servicios-header">
@@ -245,7 +228,6 @@
   </div>
 </div>
 
-<!-- MID BANNER -->
 <div class="mid-banner">
   <div class="mid-banner-content">
     <div class="section-label">Contacto Directo</div>
@@ -259,7 +241,6 @@
   </div>
 </div>
 
-<!-- CONTACTO -->
 <div class="contacto-wrap" id="contacto">
   <div class="contacto">
     <div class="section-label">Contacto</div>
@@ -278,7 +259,6 @@
   </div>
 </div>
 
-<!-- FOOTER -->
 <footer>
   <div class="footer-name">Nicolás Corradi</div>
   <div class="footer-sub">Abogado Penalista · Córdoba</div>
