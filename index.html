@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Nicolás Corradi | Abogado Penalista</title>
+<meta name="description" content="Nicolás Corradi Abogado Penalista. Defensas penales, excarcelaciones, cese de prisión preventiva. Duarte Quirós 789, Córdoba. WhatsApp: 3516691909">
+<link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Outfit:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --navy: #0e1c2e;
+    --navy-light: #1a2d48;
+    --navy-mid: #243650;
+    --silver: #8a9ab0;
+    --silver-light: #b0c0d0;
+    --silver-pale: #eef2f6;
+    --white: #ffffff;
+    --cream: #f5f7f9;
+    --dark: #080e18;
+    --gray: #5a6878;
+    --light-gray: #c8d4e0;
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  body { font-family: 'Outfit', sans-serif; color: var(--dark); background: var(--white); overflow-x: hidden; }
+
+  /* NAV */
+  nav {
+    position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+    padding: 16px 50px; display: flex; justify-content: space-between; align-items: center;
+    background: rgba(255,255,255,0.97); backdrop-filter: blur(12px);
+    border-bottom: 1px solid rgba(14,28,46,0.1);
+  }
+  .nav-brand { text-decoration: none; }
+  .nav-brand-name { font-family: 'Libre Baskerville', serif; font-size: 17px; font-weight: 700; color: var(--navy); display: block; line-height: 1.2; }
+  .nav-brand-sub { font-size: 9px; letter-spacing: 4px; text-transform: uppercase; color: var(--silver); font-weight: 400; display: block; }
+  .nav-links { display: flex; gap: 32px; list-style: none; align-items: center; }
+  .nav-links a { text-decoration: none; font-size: 11px; font-weight: 600; letter-spacing: 1.5px; text-transform: uppercase; color: var(--gray); transition: color 0.3s; }
+  .nav-links a:hover { color: var(--navy); }
+  .nav-cta { background: var(--navy) !important; color: white !important; padding: 10px 22px; border-radius: 2px; font-size: 11px !important; }
+
+  /* HERO */
+  .hero {
+    height: 100vh; min-height: 600px; position: relative;
+    display: flex; align-items: center; justify-content: center; overflow: hidden;
+  }
+  .hero-bg {
+    position: absolute; inset: 0;
+    background-image: url('abogacia.jpeg');
+    background-size: cover; background-position: center;
+    filter: brightness(0.12) saturate(0.4);
+  }
+  .hero-overlay {
+    position: absolute; inset: 0;
+    background: linear-gradient(135deg, rgba(8,14,24,0.85) 0%, rgba(14,28,46,0.5) 60%, rgba(8,14,24,0.8) 100%);
+  }
+  .hero-content {
+    position: relative; z-index: 2;
+    display: grid; grid-template-columns: 1fr 1fr;
+    max-width: 1100px; width: 100%; padding: 0 50px;
+    gap: 60px; align-items: center;
+    animation: fadeUp 1s ease-out;
+  }
+  @keyframes fadeUp { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: translateY(0); } }
+
+  .hero-text { }
+  .hero-eyebrow { font-size: 10px; letter-spacing: 6px; text-transform: uppercase; color: var(--silver-light); margin-bottom: 20px; font-weight: 400; display: flex; align-items: center; gap: 12px; }
+  .hero-eyebrow::after { content: ''; flex: 1; max-width: 40px; height: 1px; background: var(--silver-light); opacity: 0.4; }
+  .hero-title { font-family: 'Libre Baskerville', serif; font-size: clamp(32px, 4.5vw, 58px); font-weight: 700; color: white; line-height: 1.05; margin-bottom: 10px; }
+  .hero-subtitle { font-size: 11px; letter-spacing: 6px; text-transform: uppercase; color: var(--silver-light); margin-bottom: 20px; font-weight: 300; display: block; }
+  .hero-desc { font-size: 14px; color: rgba(255,255,255,0.45); line-height: 1.8; margin-bottom: 36px; font-weight: 300; max-width: 420px; }
+  .hero-divider { width: 40px; height: 1px; background: var(--silver-light); margin-bottom: 36px; opacity: 0.4; }
+  .hero-buttons { display: flex; gap: 14px; flex-wrap: wrap; }
+
+  .btn-primary { display: inline-flex; align-items: center; gap: 8px; padding: 14px 32px; background: rgba(255,255,255,0.1); border: 1px solid rgba(255,255,255,0.25); color: white; text-decoration: none; font-size: 11px; font-weight: 600; letter-spacing: 2px; text-transform: uppercase; border-radius: 2px; transition: all 0.3s; backdrop-filter: blur(4px); }
+  .btn-primary:hover { background: rgba(255,255,255,0.2); transform: translateY(-2px); }
+  .btn-ghost { display: inline-block; padding: 14px 32px; border: 1px solid rgba(176,192,208,0.3); color: var(--silver-light); text-decoration: none; font-size: 11px; font-weight: 500; letter-spacing: 2px; text-transform: uppercase; border-radius: 2px; transition: all 0.3s; }
+  .btn-ghost:hover { background: rgba(176,192,208,0.08); }
+
+  .hero-photo {
+    position: relative; height: 580px;
+  }
+  .hero-photo img {
+    width: 100%; height: 100%; object-fit: cover; object-position: top center;
+    display: block; filter: grayscale(15%);
+    box-shadow: 0 30px 80px rgba(0,0,0,0.5);
+  }
+  .hero-photo::before {
+    content: ''; position: absolute; inset: 0;
+    border: 1px solid rgba(176,192,208,0.2);
+    pointer-events: none; z-index: 2;
+  }
+  .hero-photo::after {
+    content: ''; position: absolute;
+    bottom: -10px; right: -10px;
+    width: 100%; height: 100%;
+    border: 1px solid rgba(176,192,208,0.1);
+    z-index: -1;
+  }
+
+  /* SECTION */
+  .section-label { font-size: 10px; letter-spacing: 5px; text-transform: uppercase; color: var(--silver); margin-bottom: 12px; font-weight: 600; }
+  .section-title { font-family: 'Libre Baskerville', serif; font-size: clamp(22px, 3vw, 38px); font-weight: 700; color: var(--dark); line-height: 1.15; margin-bottom: 14px; }
+  .section-divider { width: 36px; height: 2px; background: var(--navy); margin-bottom: 28px; opacity: 0.3; }
+
+  /* NOSOTROS */
+  .nosotros-wrap { background: var(--silver-pale); padding: 80px 50px; }
+  .nosotros { max-width: 1080px; margin: 0 auto; }
+  .nosotros-header { text-align: center; margin-bottom: 46px; }
+  .nosotros-header .section-divider { margin: 0 auto; }
+  .nosotros-text { max-width: 780px; margin: 0 auto 50px; text-align: center; }
+  .nosotros-text p { font-size: 15px; line-height: 1.9; color: var(--gray); margin-bottom: 14px; font-weight: 300; }
+
+  .nosotros-image { position: relative; max-width: 700px; margin: 0 auto; height: 400px; padding: 16px; background: white; box-shadow: 0 20px 60px rgba(14,28,46,0.12); border-radius: 2px; overflow: hidden; }
+  .nosotros-image img { width: 100%; height: 100%; object-fit: cover; object-position: center 30%; display: block; }
+  .nosotros-image::before { content: ''; position: absolute; inset: 8px; border: 2px solid rgba(255,255,255,1); pointer-events: none; z-index: 2; }
+  .nosotros-image::after { content: ''; position: absolute; top: 14px; left: 14px; right: -14px; bottom: -14px; background: rgba(14,28,46,0.06); border-radius: 2px; z-index: -1; }
+  .nosotros-image-accent { position: absolute; bottom: -14px; right: -14px; width: 70px; height: 70px; border: 2px solid var(--navy); border-radius: 2px; opacity: 0.15; z-index: -1; }
+
+  /* SERVICIOS */
+  .servicios-wrap { background: var(--navy); padding: 80px 50px; }
+  .servicios { max-width: 1000px; margin: 0 auto; }
+  .servicios-header { text-align: center; margin-bottom: 50px; }
+  .servicios-header .section-divider { margin: 0 auto; background: var(--silver-light); opacity: 0.3; }
+  .servicios-header .section-label { color: var(--silver-light); }
+  .servicios-header .section-title { color: white; }
+  .servicios-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 2px; background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.05); }
+  .servicio-card { background: var(--navy); padding: 36px 28px; text-align: center; transition: all 0.3s; }
+  .servicio-card:hover { background: var(--navy-light); }
+  .servicio-icon { width: 50px; height: 50px; border: 1px solid rgba(176,192,208,0.2); display: flex; align-items: center; justify-content: center; margin: 0 auto 18px; }
+  .servicio-nombre { font-family: 'Libre Baskerville', serif; font-size: 16px; font-weight: 700; color: white; margin-bottom: 8px; line-height: 1.3; }
+  .servicio-desc { font-size: 12px; color: var(--silver); line-height: 1.5; font-weight: 300; }
+
+  /* MID BANNER */
+  .mid-banner { background: var(--cream); padding: 70px 50px; text-align: center; border-top: 3px solid var(--navy); }
+  .mid-banner-content { max-width: 560px; margin: 0 auto; }
+  .mid-banner-content .section-label { color: var(--navy); }
+  .mid-banner-content h2 { font-family: 'Libre Baskerville', serif; font-size: clamp(22px, 3vw, 36px); font-weight: 700; color: var(--navy); margin-bottom: 12px; }
+  .mid-banner-content p { color: var(--gray); font-size: 14px; margin-bottom: 30px; line-height: 1.7; font-weight: 300; }
+  .mid-divider { width: 36px; height: 2px; background: var(--navy); margin: 0 auto 20px; opacity: 0.2; }
+  .btn-navy { display: inline-flex; align-items: center; gap: 8px; padding: 14px 36px; background: var(--navy); color: white; text-decoration: none; font-size: 11px; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; border-radius: 2px; transition: all 0.3s; }
+  .btn-navy:hover { background: var(--navy-light); transform: translateY(-2px); }
+
+  /* CONTACTO */
+  .contacto-wrap { background: var(--navy-mid); padding: 60px 24px 36px; }
+  .contacto { max-width: 440px; margin: 0 auto; text-align: center; }
+  .contacto .section-divider { margin: 0 auto 28px; background: var(--silver-light); opacity: 0.3; }
+  .contacto .section-label { color: var(--silver-light); }
+  .contacto .section-title { color: white; font-size: clamp(22px, 3vw, 34px); }
+  .contacto-items { display: flex; flex-direction: column; }
+  .contacto-item { padding: 18px 0; border-bottom: 1px solid rgba(255,255,255,0.07); }
+  .contacto-item:last-child { border-bottom: none; }
+  .contacto-label { font-size: 10px; letter-spacing: 3px; text-transform: uppercase; color: var(--silver-light); margin-bottom: 6px; font-weight: 600; opacity: 0.7; }
+  .contacto-value { font-family: 'Libre Baskerville', serif; font-size: 18px; color: white; }
+  .contacto-value a { color: white; text-decoration: none; font-family: 'Outfit', sans-serif; font-size: 17px; font-weight: 500; }
+
+  /* FOOTER */
+  footer { background: var(--dark); text-align: center; padding: 44px 24px; border-top: 1px solid rgba(255,255,255,0.05); }
+  .footer-name { font-family: 'Libre Baskerville', serif; font-size: 19px; font-weight: 700; color: rgba(255,255,255,0.6); margin-bottom: 4px; }
+  .footer-sub { font-size: 10px; letter-spacing: 4px; text-transform: uppercase; color: rgba(255,255,255,0.2); margin-bottom: 16px; }
+  .footer-divider { width: 32px; height: 1px; background: rgba(255,255,255,0.1); margin: 0 auto 16px; }
+  .footer-text { font-size: 12px; line-height: 1.8; color: rgba(255,255,255,0.2); }
+
+  @media (max-width: 768px) {
+    nav { padding: 14px 20px; }
+    .nav-links { display: none; }
+    .hero-content { grid-template-columns: 1fr; padding: 0 20px; text-align: center; }
+    .hero-eyebrow { justify-content: center; }
+    .hero-desc { margin-left: auto; margin-right: auto; }
+    .hero-buttons { justify-content: center; }
+    .hero-photo { height: 380px; }
+    .nosotros-wrap { padding: 50px 20px; }
+    .servicios-wrap { padding: 50px 20px; }
+    .servicios-grid { grid-template-columns: 1fr; }
+    .mid-banner { padding: 50px 24px; }
+  }
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <a href="#inicio" class="nav-brand">
+    <span class="nav-brand-name">Nicolás Corradi</span>
+    <span class="nav-brand-sub">Abogado Penalista · Córdoba</span>
+  </a>
+  <ul class="nav-links">
+    <li><a href="#nosotros">Quiénes Somos</a></li>
+    <li><a href="#servicios">Servicios</a></li>
+    <li><a href="#contacto">Contacto</a></li>
+    <li><a href="https://wa.me/543516691909" target="_blank" class="nav-cta">Consultar</a></li>
+  </ul>
+</nav>
+
+<!-- HERO -->
+<section class="hero" id="inicio">
+  <div class="hero-bg"></div>
+  <div class="hero-overlay"></div>
+  <div class="hero-content">
+    <div class="hero-text">
+      <div class="hero-eyebrow">Córdoba · Argentina</div>
+      <h1 class="hero-title">Nicolás Corradi</h1>
+      <span class="hero-subtitle">Abogado Penalista</span>
+      <div class="hero-divider"></div>
+      <p class="hero-desc">Asesoramiento personalizado, defensas sólidas y acompañamiento en cada etapa del proceso penal.</p>
+      <div class="hero-buttons">
+        <a href="https://wa.me/543516691909" target="_blank" class="btn-primary">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="white"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413z"/></svg>
+          Consultar ahora
+        </a>
+        <a href="#servicios" class="btn-ghost">Ver Servicios</a>
+      </div>
+    </div>
+    <div class="hero-photo">
+      <img src="ChatGPT Image 28 may 2026, 08_30_47.png" alt="Nicolás Corradi Abogado Penalista">
+    </div>
+  </div>
+</section>
+
+<!-- NOSOTROS -->
+<div class="nosotros-wrap" id="nosotros">
+  <div class="nosotros">
+    <div class="nosotros-header">
+      <div class="section-label">Quiénes Somos</div>
+      <h2 class="section-title">Nicolás Corradi</h2>
+      <div class="section-divider"></div>
+    </div>
+    <div class="nosotros-text">
+      <p>Contamos con profesionales altamente capacitados y en constante especialización para brindarte soluciones eficaces a tus problemas y dudas legales.</p>
+      <p>Contamos con profesionales altamente capacitados en el fuero y brindamos acompañamiento personalizado a nuestros clientes.</p>
+      <p>Nos caracterizamos por brindar a nuestros clientes asesoramiento personalizado. Aprovechamos la oportunidad para agradecer a quienes confían plenamente en nuestro trabajo.</p>
+    </div>
+    <div class="nosotros-image">
+      <img src="abogacia.jpeg" alt="Estudio Jurídico Nicolás Corradi">
+      <div class="nosotros-image-accent"></div>
+    </div>
+  </div>
+</div>
+
+<!-- SERVICIOS -->
+<div class="servicios-wrap" id="servicios">
+  <div class="servicios">
+    <div class="servicios-header">
+      <div class="section-label">Áreas de práctica</div>
+      <h2 class="section-title">Servicios</h2>
+      <div class="section-divider"></div>
+    </div>
+    <div class="servicios-grid">
+      <div class="servicio-card">
+        <div class="servicio-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#b0c0d0" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></div>
+        <div class="servicio-nombre">Defensas Penales</div>
+        <div class="servicio-desc">Defensa integral en toda clase de causas penales</div>
+      </div>
+      <div class="servicio-card">
+        <div class="servicio-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#b0c0d0" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg></div>
+        <div class="servicio-nombre">Mantenimiento y Recupero de Libertad</div>
+        <div class="servicio-desc">Gestión urgente para recuperar y mantener la libertad</div>
+      </div>
+      <div class="servicio-card">
+        <div class="servicio-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#b0c0d0" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg></div>
+        <div class="servicio-nombre">Cese de Prisión Preventiva</div>
+        <div class="servicio-desc">Solicitudes y recursos para el cese de la detención preventiva</div>
+      </div>
+      <div class="servicio-card">
+        <div class="servicio-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#b0c0d0" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/></svg></div>
+        <div class="servicio-nombre">Impugnaciones</div>
+        <div class="servicio-desc">Recursos de apelación e impugnación de resoluciones judiciales</div>
+      </div>
+      <div class="servicio-card">
+        <div class="servicio-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#b0c0d0" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M9 11l3 3L22 4"/><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/></svg></div>
+        <div class="servicio-nombre">Querellas</div>
+        <div class="servicio-desc">Representación como parte querellante en causas penales</div>
+      </div>
+      <div class="servicio-card">
+        <div class="servicio-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#b0c0d0" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg></div>
+        <div class="servicio-nombre">Consultoría Penal</div>
+        <div class="servicio-desc">Asesoramiento y consultas en materia penal</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- MID BANNER -->
+<div class="mid-banner">
+  <div class="mid-banner-content">
+    <div class="section-label">Contacto Directo</div>
+    <div class="mid-divider"></div>
+    <h2>¿Necesitás asesoramiento?</h2>
+    <p>Escribinos por WhatsApp y te respondemos a la brevedad con total confidencialidad y compromiso.</p>
+    <a href="https://wa.me/543516691909" target="_blank" class="btn-navy">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="white"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413z"/></svg>
+      Hacé tu consulta
+    </a>
+  </div>
+</div>
+
+<!-- CONTACTO -->
+<div class="contacto-wrap" id="contacto">
+  <div class="contacto">
+    <div class="section-label">Contacto</div>
+    <h2 class="section-title">Encontranos</h2>
+    <div class="section-divider"></div>
+    <div class="contacto-items">
+      <div class="contacto-item">
+        <div class="contacto-label">Dirección</div>
+        <div class="contacto-value" style="font-size:16px;">Duarte Quirós 789, Piso 4 B, Córdoba</div>
+      </div>
+      <div class="contacto-item">
+        <div class="contacto-label">WhatsApp</div>
+        <div class="contacto-value"><a href="https://wa.me/543516691909">3516-691909</a></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-name">Nicolás Corradi</div>
+  <div class="footer-sub">Abogado Penalista · Córdoba</div>
+  <div class="footer-divider"></div>
+  <div class="footer-text">
+    Duarte Quirós 789, Piso 4 B, Córdoba · WhatsApp: 3516-691909<br>
+    <span style="font-size:11px; color:rgba(255,255,255,0.15); margin-top:10px; display:block;">© 2025 · Todos los derechos reservados</span>
+  </div>
+</footer>
+
+</body>
+</html>
