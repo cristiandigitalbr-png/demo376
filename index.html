@@ -77,14 +77,14 @@
 
   /* NOSOTROS */
   .nosotros-wrap { background: var(--silver-pale); padding: 80px 50px; }
-  .nosotros { max-width: 1080px; margin: 0 auto; }
-  .nosotros-header { text-align: center; margin-bottom: 46px; }
+  .nosotros { max-width: 900px; margin: 0 auto; }
+  .nosotros-header { text-align: center; margin-bottom: 36px; }
   .nosotros-header .section-divider { margin: 0 auto; }
-  .nosotros-text { max-width: 780px; margin: 0 auto 50px; text-align: center; }
+  .nosotros-text { text-align: center; margin-bottom: 40px; }
   .nosotros-text p { font-size: 15px; line-height: 1.9; color: var(--gray); margin-bottom: 14px; font-weight: 300; }
 
-  .nosotros-image { position: relative; max-width: 700px; margin: 0 auto; height: 400px; padding: 16px; background: white; box-shadow: 0 20px 60px rgba(14,28,46,0.12); border-radius: 2px; overflow: hidden; }
-  .nosotros-image img { width: 100%; height: 100%; object-fit: cover; object-position: center 30%; display: block; }
+  .nosotros-image { position: relative; height: 520px; max-width: 480px; margin: 0 auto; padding: 16px; background: white; box-shadow: 0 20px 60px rgba(14,28,46,0.12); border-radius: 2px; overflow: hidden; }
+  .nosotros-image img { width: 100%; height: 100%; object-fit: cover; object-position: top center; display: block; }
   .nosotros-image::before { content: ''; position: absolute; inset: 8px; border: 2px solid rgba(255,255,255,1); pointer-events: none; z-index: 2; }
   .nosotros-image::after { content: ''; position: absolute; top: 14px; left: 14px; right: -14px; bottom: -14px; background: rgba(14,28,46,0.06); border-radius: 2px; z-index: -1; }
   .nosotros-image-accent { position: absolute; bottom: -14px; right: -14px; width: 70px; height: 70px; border: 2px solid var(--navy); border-radius: 2px; opacity: 0.15; z-index: -1; }
@@ -187,20 +187,18 @@
 <div class="nosotros-wrap" id="nosotros">
   <div class="nosotros">
     <div class="nosotros-header">
-      <div class="section-label">Quiénes Somos</div>
+      <div class="section-label">Sobre Mí</div>
       <h2 class="section-title">Nicolás Corradi</h2>
       <div class="section-divider"></div>
     </div>
-    <div style="max-width:1080px; margin:0 auto; display:grid; grid-template-columns:1fr 1fr; gap:60px; align-items:start;">
-      <div class="nosotros-text" style="margin:0;">
-        <p>Contamos con profesionales altamente capacitados y en constante especialización para brindarte soluciones eficaces a tus problemas y dudas legales.</p>
-        <p>Contamos con profesionales altamente capacitados en el fuero y brindamos acompañamiento personalizado a nuestros clientes.</p>
-        <p>Nos caracterizamos por brindar a nuestros clientes asesoramiento personalizado. Aprovechamos la oportunidad para agradecer a quienes confían plenamente en nuestro trabajo.</p>
-      </div>
-      <div class="nosotros-image" style="max-width:100%; height:520px;">
-        <img src="ChatGPT Image 28 may 2026, 08_30_47.png" alt="Nicolás Corradi Abogado Penalista">
-        <div class="nosotros-image-accent"></div>
-      </div>
+    <div class="nosotros-text">
+      <p>Contamos con profesionales altamente capacitados y en constante especialización para brindarte soluciones eficaces a tus problemas y dudas legales.</p>
+      <p>Contamos con profesionales altamente capacitados en el fuero y brindamos acompañamiento personalizado a nuestros clientes.</p>
+      <p>Nos caracterizamos por brindar a nuestros clientes asesoramiento personalizado. Aprovechamos la oportunidad para agradecer a quienes confían plenamente en nuestro trabajo.</p>
+    </div>
+    <div class="nosotros-image">
+      <img src="ChatGPT Image 28 may 2026, 08_30_47.png" alt="Nicolás Corradi Abogado Penalista">
+      <div class="nosotros-image-accent"></div>
     </div>
   </div>
 </div>
