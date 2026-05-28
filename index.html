@@ -61,7 +61,7 @@
   .hero-eyebrow { font-size: 10px; letter-spacing: 6px; text-transform: uppercase; color: var(--silver-light); margin-bottom: 20px; font-weight: 400; display: flex; align-items: center; justify-content: center; gap: 12px; }
   .hero-eyebrow::before, .hero-eyebrow::after { content: ''; width: 24px; height: 1px; background: var(--silver-light); opacity: 0.4; }
   .hero-title { font-family: 'Libre Baskerville', serif; font-size: clamp(26px, 4vw, 52px); font-weight: 700; color: white; line-height: 1.05; margin-bottom: 6px; }
-  .hero-subtitle { font-size: 11px; letter-spacing: 6px; text-transform: uppercase; color: var(--silver-light); margin-bottom: 36px; font-weight: 300; display: block; }
+  .hero-subtitle { font-size: 11px; letter-spacing: 6px; text-transform: uppercase; color: #e0c270; margin-bottom: 36px; font-weight: 400; display: block; }
   .hero-divider { width: 40px; height: 1px; background: var(--silver-light); margin: 0 auto 36px; opacity: 0.4; }
   .hero-buttons { display: flex; gap: 14px; flex-wrap: wrap; justify-content: center; }
 
@@ -90,16 +90,16 @@
   .nosotros-image-accent { position: absolute; bottom: -14px; right: -14px; width: 70px; height: 70px; border: 2px solid var(--navy); border-radius: 2px; opacity: 0.15; z-index: -1; }
 
   /* SERVICIOS */
-  .servicios-wrap { background: var(--navy); padding: 80px 50px; }
+  .servicios-wrap { background: #1a1a1a; padding: 80px 50px; }
   .servicios { max-width: 1000px; margin: 0 auto; }
   .servicios-header { text-align: center; margin-bottom: 50px; }
-  .servicios-header .section-divider { margin: 0 auto; background: var(--silver-light); opacity: 0.3; }
-  .servicios-header .section-label { color: var(--silver-light); }
+  .servicios-header .section-divider { margin: 0 auto; background: #e0c270; opacity: 0.4; }
+  .servicios-header .section-label { color: #e0c270; }
   .servicios-header .section-title { color: white; }
-  .servicios-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 2px; background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.05); }
-  .servicio-card { background: var(--navy); padding: 36px 28px; text-align: center; transition: all 0.3s; }
-  .servicio-card:hover { background: var(--navy-light); }
-  .servicio-icon { width: 50px; height: 50px; border: 1px solid rgba(176,192,208,0.2); display: flex; align-items: center; justify-content: center; margin: 0 auto 18px; }
+  .servicios-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 2px; background: rgba(255,255,255,0.04); border: 1px solid rgba(255,255,255,0.05); }
+  .servicio-card { background: #1a1a1a; padding: 36px 28px; text-align: center; transition: all 0.3s; }
+  .servicio-card:hover { background: #242424; }
+  .servicio-icon { width: 50px; height: 50px; border: 1px solid rgba(224,194,112,0.25); display: flex; align-items: center; justify-content: center; margin: 0 auto 18px; }
   .servicio-nombre { font-family: 'Libre Baskerville', serif; font-size: 16px; font-weight: 700; color: white; margin-bottom: 8px; line-height: 1.3; }
   .servicio-desc { font-size: 12px; color: var(--silver); line-height: 1.5; font-weight: 300; }
 
@@ -213,32 +213,32 @@
     </div>
     <div class="servicios-grid">
       <div class="servicio-card">
-        <div class="servicio-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#b0c0d0" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></div>
+        <div class="servicio-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#e0c270" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></div>
         <div class="servicio-nombre">Defensas Penales</div>
         <div class="servicio-desc">Defensa integral en toda clase de causas penales</div>
       </div>
       <div class="servicio-card">
-        <div class="servicio-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#b0c0d0" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg></div>
+        <div class="servicio-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#e0c270" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg></div>
         <div class="servicio-nombre">Mantenimiento y Recupero de Libertad</div>
         <div class="servicio-desc">Gestión urgente para recuperar y mantener la libertad</div>
       </div>
       <div class="servicio-card">
-        <div class="servicio-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#b0c0d0" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg></div>
+        <div class="servicio-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#e0c270" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg></div>
         <div class="servicio-nombre">Cese de Prisión Preventiva</div>
         <div class="servicio-desc">Solicitudes y recursos para el cese de la detención preventiva</div>
       </div>
       <div class="servicio-card">
-        <div class="servicio-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#b0c0d0" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/></svg></div>
+        <div class="servicio-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#e0c270" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/></svg></div>
         <div class="servicio-nombre">Impugnaciones</div>
         <div class="servicio-desc">Recursos de apelación e impugnación de resoluciones judiciales</div>
       </div>
       <div class="servicio-card">
-        <div class="servicio-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#b0c0d0" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M9 11l3 3L22 4"/><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/></svg></div>
+        <div class="servicio-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#e0c270" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M9 11l3 3L22 4"/><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/></svg></div>
         <div class="servicio-nombre">Querellas</div>
         <div class="servicio-desc">Representación como parte querellante en causas penales</div>
       </div>
       <div class="servicio-card">
-        <div class="servicio-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#b0c0d0" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg></div>
+        <div class="servicio-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#e0c270" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg></div>
         <div class="servicio-nombre">Consultoría Penal</div>
         <div class="servicio-desc">Asesoramiento y consultas en materia penal</div>
       </div>
